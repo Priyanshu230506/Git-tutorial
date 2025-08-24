@@ -6,14 +6,26 @@
     <title>Github</title>
 </head>
 <body>
-    <button type="button" onclick="github()">Github</button>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    <button type="button" onclick="github()" ondblclick="githubgo()">Github</button>
 </body>
 <script>
-    let name = 'Priyanshu';
-    function github() {
-        addEventListener('click', function() {
-            document.querySelector('button').innerText = `Hello ${name} to Github`;
-        });
+    function github(){
+        addEventListener('click', function(){
+            const name = document.getElementById('name').value;
+            document.querySelector("button").innerHTML = `hello ${name} welcome to github`;
+        })
+    
+    }
+    function githubgo(){
+        addEventListener('dblclick', function(){
+            const name = document.getElementById('name').value;
+            document.querySelector("button").innerHTML = `hello ${name} welcome to github go`;
+        })
+    
     }
 </script>
+</script>
+
 </html>
